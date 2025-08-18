@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: false),
+      locale: Locale('ar'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
