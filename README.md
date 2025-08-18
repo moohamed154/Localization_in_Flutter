@@ -1,16 +1,39 @@
-# localization
+# Flutter Localization Demo
 
-A new Flutter project.
+A Flutter application demonstrating language localization with support for English, Arabic, and System language preferences.
+
+## Features
+
+- Dynamic language switching between English and Arabic
+- System language detection and application
+- Persistent language preferences using SharedPreferences
+- Clean architecture with BLoC pattern
+- Responsive UI design
+
+## Architecture
+
+The project follows a clean architecture approach with:
+
+- **Cache Layer**: Handles local storage using SharedPreferences
+- **BLoC Pattern**: Manages state and business logic
+- **UI Layer**: Responsive screens and widgets
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository
+2. Install dependencies:
 
-A few resources to get you started if this is your first Flutter project:
+   ```bash
+   flutter pub get
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Run the app:
+   ```bash
+   flutter run
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependencies
+
+- **flutter_bloc**: State management
+- **shared_preferences**: Local storage
+- **intl**: Internationalization support
