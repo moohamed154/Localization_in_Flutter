@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localization/app/logic/cubit/app_cubit.dart';
 import 'package:localization/generated/l10n.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,7 +12,39 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text(S.current.hello, style: TextStyle(fontSize: 30))],
+          children: [
+            Text(S.current.hello, style: TextStyle(fontSize: 30)),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                AppCubit.get(context).selectLanguage(LanguageState.arabic);
+              },
+              child: Text(
+                'اللغة العربية',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                AppCubit.get(context).selectLanguage(LanguageState.english);
+              },
+              child: Text(
+                'English',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                AppCubit.get(context).selectLanguage(LanguageState.system);
+              },
+              child: Text(
+                'System',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+          ],
         ),
       ),
     );
