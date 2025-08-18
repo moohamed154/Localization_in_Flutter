@@ -63,6 +63,36 @@ class S {
   String get home {
     return Intl.message('Home', name: 'home', desc: '', args: []);
   }
+
+  /// `اللغة العربية`
+  String get arabic_language {
+    return Intl.message(
+      'اللغة العربية',
+      name: 'arabic_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english_language {
+    return Intl.message(
+      'English',
+      name: 'english_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لغة الجهاز`
+  String get system_language {
+    return Intl.message(
+      'لغة الجهاز',
+      name: 'system_language',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

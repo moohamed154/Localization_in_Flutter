@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
                 AppCubit.get(context).selectLanguage(LanguageState.arabic);
               },
               child: Text(
-                'اللغة العربية',
+                S.current.arabic_language,
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 AppCubit.get(context).selectLanguage(LanguageState.english);
               },
               child: Text(
-                'English',
+                S.current.english_language,
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                 AppCubit.get(context).selectLanguage(LanguageState.system);
               },
               child: Text(
-                'System',
+                S.current.system_language,
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),

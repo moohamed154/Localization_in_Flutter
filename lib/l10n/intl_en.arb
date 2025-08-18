@@ -1,4 +1,8 @@
 {
   "hello": "Hello",
-  "home": "Home"
+  "home": "Home",
+  "arabic_language": "اللغة العربية",
+  "english_language": "English",
+  "system_language": "لغة الجهاز"
 }
+

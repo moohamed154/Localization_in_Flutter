@@ -1,4 +1,6 @@
 {
   "hello": "مرحبا",
-  "home": "الرئيسية"
-}
+  "home": "الرئيسية",
+  "arabic_language": "اللغة العربية",
+  "english_language": "English",
+  "system_language": "System"}
