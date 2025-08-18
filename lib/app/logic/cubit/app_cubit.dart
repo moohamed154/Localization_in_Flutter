@@ -1,16 +1,14 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:localization/cache/cache_helper.dart';
 import 'package:localization/cache/cache_helper_key.dart';
-import 'package:meta/meta.dart';
 
 part 'app_state.dart';
 
 enum LanguageState { english, arabic, system }
 
 class AppCubit extends Cubit<AppState> {
-  AppCubit() : super(AppInitial()) {
+  AppCubit() : super(AppInitialState()) {
     _loadLanguage();
   }
 
@@ -31,15 +29,16 @@ class AppCubit extends Cubit<AppState> {
 
   //*save language
   Future<void> _loadLanguage() async {
-    String? savedLanguage = await CacheHelper().getData(
+    final dynamic savedLanguage = CacheHelper().getData(
       key: CacheHelperKey.language,
     );
-    if (savedLanguage != null) {
+    if (savedLanguage is String) {
       currentLanguage = LanguageState.values.firstWhere(
         (element) => element.name == savedLanguage,
         orElse: () => LanguageState.system,
       );
     }
+    emit(LanguageSelectedState());
   }
 
   //*get language

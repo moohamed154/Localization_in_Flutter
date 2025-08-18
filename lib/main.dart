@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:localization/app/logic/cubit/app_cubit.dart';
+import 'package:localization/cache/cache_helper.dart';
 import 'package:localization/generated/l10n.dart';
 import 'package:localization/screen/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper().init();
   runApp(const MyApp());
 }
 
